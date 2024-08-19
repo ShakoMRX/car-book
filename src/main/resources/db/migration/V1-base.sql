@@ -1,0 +1,28 @@
+-- V1__Create_car_tables.sql
+
+-- Create CAR_BRANDS table
+CREATE TABLE CAR_BRANDS (
+                            ID BIGINT AUTO_INCREMENT PRIMARY KEY,
+                            NAME VARCHAR(255) NOT NULL
+);
+
+-- Create CAR_MODELS table
+CREATE TABLE CAR_MODELS (
+                            ID BIGINT AUTO_INCREMENT PRIMARY KEY,
+                            NAME VARCHAR(255) NOT NULL,
+                            CAR_BRAND_ID BIGINT,
+                            FOREIGN KEY (CAR_BRAND_ID) REFERENCES CAR_BRANDS(ID)
+);
+
+-- Insert data into CAR_BRANDS
+INSERT INTO CAR_BRANDS (NAME) VALUES ('Toyota');
+INSERT INTO CAR_BRANDS (NAME) VALUES ('Honda');
+INSERT INTO CAR_BRANDS (NAME) VALUES ('Ford');
+
+-- Insert data into CAR_MODELS
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('Corolla', 1); -- Toyota
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('Camry', 1); -- Toyota
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('Civic', 2); -- Honda
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('Accord', 2); -- Honda
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('Mustang', 3); -- Ford
+INSERT INTO CAR_MODELS (NAME, CAR_BRAND_ID) VALUES ('F-150', 3); -- Ford
