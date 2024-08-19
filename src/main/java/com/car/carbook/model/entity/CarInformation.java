@@ -13,6 +13,7 @@ public class CarInformation {
     private Long id;
     @Column(unique = true, nullable = false)
     private String vinCode;
+    private String carNumber;
     private Long carBrandId;
     private Long carModelId;
     private String color;
@@ -65,5 +66,13 @@ public class CarInformation {
 
     public void setCreatedByUserId(Long createdByUserId) {
         this.createdByUserId = createdByUserId;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
 }

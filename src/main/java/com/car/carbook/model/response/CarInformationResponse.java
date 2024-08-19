@@ -7,6 +7,7 @@ public class CarInformationResponse {
     private Long carBrandId;
     private Long carModelId;
     private String color;
+    private String carNumber;
 
     public Long getId() {
         return id;
@@ -46,5 +47,13 @@ public class CarInformationResponse {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
 }

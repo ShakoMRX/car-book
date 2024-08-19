@@ -1,11 +1,15 @@
 package com.car.carbook.model.request;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CarInformationRequest {
 
     private String vinCode;
     private Long carBrandId;
     private Long carModelId;
     private String color;
+    private String carNumber;
 
     public String getVinCode() {
         return vinCode;
@@ -37,5 +41,13 @@ public class CarInformationRequest {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
 }

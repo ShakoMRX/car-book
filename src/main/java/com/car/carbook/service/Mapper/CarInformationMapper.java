@@ -22,6 +22,7 @@ public class CarInformationMapper {
         carInformation.setCarBrandId(request.getCarBrandId());
         carInformation.setCarModelId(request.getCarModelId());
         carInformation.setColor(request.getColor());
+        carInformation.setCarNumber(request.getCarNumber());
         carInformation.setCreatedByUserId(userService.getAuthorizedUserId());
         return carInformation;
     }
@@ -33,6 +34,7 @@ public class CarInformationMapper {
         response.setCarBrandId(entity.getCarBrandId());
         response.setCarModelId(entity.getCarModelId());
         response.setColor(entity.getColor());
+        response.setCarNumber(entity.getCarNumber());
         return response;
     }
 }
